@@ -41,7 +41,8 @@ Cypress.Commands.add('getToken', (user, passwd) => {
 })
 
 Cypress.Commands.add('resetRest', () => {
-    cy.getToken('cc@cc', 'b').then(token => {
+    //'cc@cc', 'b'
+    cy.getToken('zahir@zahira', 'dade').then(token => {
         cy.request({
             method: 'GET',
             url: '/reset',
@@ -51,7 +52,7 @@ Cypress.Commands.add('resetRest', () => {
 })
 
 Cypress.Commands.add('getContaByName', name => {
-    cy.getToken('cc@cc', 'b').then(token => {
+    cy.getToken('zahir@zahira', 'dade').then(token => {
     cy.request({
         method: 'GET',
         url: '/contas',
